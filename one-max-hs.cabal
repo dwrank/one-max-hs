@@ -25,7 +25,14 @@ source-repository head
 
 library
   exposed-modules:
+      Genetic.Utils
+      Genetic.Vector.Unboxed
+      Genetic.Vector.Unboxed.Mutable
       Lib
+      OneMaxL
+      OneMaxV
+      Types.Chromosome
+      Types.Status
   other-modules:
       Paths_one_max_hs
   hs-source-dirs:
@@ -33,6 +40,11 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , primitive >=0.7
+    , random >=1.2
+    , random-shuffle >=0.0
+    , split >=0.2
+    , vector >=0.12
   default-language: Haskell2010
 
 executable one-max-hs-exe
@@ -45,6 +57,11 @@ executable one-max-hs-exe
   build-depends:
       base >=4.7 && <5
     , one-max-hs
+    , primitive >=0.7
+    , random >=1.2
+    , random-shuffle >=0.0
+    , split >=0.2
+    , vector >=0.12
   default-language: Haskell2010
 
 test-suite one-max-hs-test
@@ -58,4 +75,9 @@ test-suite one-max-hs-test
   build-depends:
       base >=4.7 && <5
     , one-max-hs
+    , primitive >=0.7
+    , random >=1.2
+    , random-shuffle >=0.0
+    , split >=0.2
+    , vector >=0.12
   default-language: Haskell2010
